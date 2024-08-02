@@ -10,7 +10,20 @@
  * This function renders dinamically the page
  * @param {function} callback function to call when the page is rendered
  */
-function renderPage(callback) {
+async function renderPage(callback) {
+
+    /**
+     * This function fetches a part of the page from the server
+     * @param {string} url The URL of the part to fetch
+     * @returns {Promise<string>} The HTML of the part
+     */
+    async function fetchPart(url) {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`Error loading ${url}: ${response.statusText}`);
+        }
+        return await response.text();
+    }
 
     //Using URL API to get the page parameter from the URL
     const params = new URLSearchParams(window.location.search);
@@ -29,20 +42,25 @@ function renderPage(callback) {
         "page": `./pages/${page}.html`,
         "footer": "./parts/footer.html"
     };
-    let loadedParts = 0;
 
-    //loading the parts via fetch
-    for(const [part, path] of Object.entries(parts)){
-        fetch(path)
-            .then(response => response.text())
-            .then(data => {
-                container.innerHTML += data;
-                loadedParts++;
-                if(loadedParts === Object.keys(parts).length){
-                    loader.after(container);
-                    loader.classList.add("hidden");
-                    callback();
-                }
-            });
+    //loads the parts of the page and appends them to the container    
+    try {
+        for (const [part, path] of Object.entries(parts)) {
+            const data = await fetchPart(path);
+            container.innerHTML += data;
+        }
+
+        //when all the parts are loaded, append the container to the loader and hide the loader
+        loader.after(container);
+        loader.classList.add("hidden");
+
+        //call the callback function
+        callback();
+
+    } catch (error) {
+        console.error("Error loading part: ", error);
+        setTimeout(() => {
+            window.location = "/?page=404";
+        }, 1000);
     }
 }
