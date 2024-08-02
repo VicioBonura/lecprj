@@ -43,6 +43,12 @@ async function renderPage(callback) {
         "footer": "./parts/footer.html"
     };
 
+    //inject the css file
+    const link = document.createElement('link');
+    link.setAttribute('rel', 'stylesheet');
+    link.setAttribute('href', `./styles/${page}.css`);
+    document.head.appendChild(link);
+
     //loads the parts of the page and appends them to the container    
     try {
         for (const [part, path] of Object.entries(parts)) {
