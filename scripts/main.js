@@ -8,6 +8,8 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     renderPage(() => {
+        
+        //XXX - Debug
         console.log("Page rendered");
     });
 });
