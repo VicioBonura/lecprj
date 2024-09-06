@@ -1,0 +1,114 @@
+{
+	"teams": [
+		{
+			"id": 1,
+			"name": "Fnatic",
+			"logo": "fnatic.svg",
+			"coach": 6,
+			"top": 1,
+			"jungle": 2,
+			"mid": 3,
+			"bot": 4,
+			"support": 5
+		},
+		{
+			"id": 2,
+			"name": "G2 Esports",
+			"logo": "g2_esports.svg",
+			"coach": 12,
+			"top": 7,
+			"jungle": 8,
+			"mid": 9,
+			"bot": 10,
+			"support": 11
+		},
+		{
+			"id": 3,
+			"name": "GIANTX",
+			"logo": "giantx.svg",
+			"coach": 18,
+			"top": 13,
+			"jungle": 14,
+			"mid": 15,
+			"bot": 16,
+			"support": 17
+		},
+		{
+			"id": 4,
+			"name": "Karmine Corp",
+			"logo": "karmine_corp.svg",
+			"coach": 24,
+			"top": 19,
+			"jungle": 20,
+			"mid": 21,
+			"bot": 22,
+			"support": 23
+		},
+		{
+			"id": 5,
+			"name": "MAD Lions KOI",
+			"logo": "mad_lions.svg",
+			"coach": 30,
+			"top": 25,
+			"jungle": 26,
+			"mid": 27,
+			"bot": 28,
+			"support": 29
+		},
+		{
+			"id": 6,
+			"name": "Rogue",
+			"logo": "rogue.svg",
+			"coach": 36,
+			"top": 31,
+			"jungle": 32,
+			"mid": 33,
+			"bot": 34,
+			"support": 35
+		},
+		{
+			"id": 7,
+			"name": "SK Gaming",
+			"logo": "sk_gaming.svg",
+			"coach": 42,
+			"top": 37,
+			"jungle": 38,
+			"mid": 39,
+			"bot": 40,
+			"support": 41
+		},
+		{
+			"id": 8,
+			"name": "Team BDS",
+			"logo": "team_bds.png",
+			"coach": 48,
+			"top": 43,
+			"jungle": 44,
+			"mid": 45,
+			"bot": 46,
+			"support": 47
+		},
+		{
+			"id": 9,
+			"name": "Team Heretics",
+			"logo": "team_heretics.png",
+			"coach": 54,
+			"top": 49,
+			"jungle": 50,
+			"mid": 51,
+			"bot": 52,
+			"support": 53
+		},
+		{
+			"id": 10,
+			"name": "Team Vitality",
+			"logo": "team_vitality.svg",
+			"coach": 60,
+			"top": 55,
+			"jungle": 56,
+			"mid": 57,
+			"bot": 58,
+			"support": 59
+		}
+	]
+}
