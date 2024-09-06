@@ -56,6 +56,10 @@ async function renderPage(callback) {
             container.innerHTML += data;
         }
 
+        //update page title
+        const pageTitle = document.querySelector("title");
+        pageTitle.textContent = page.charAt(0).toUpperCase() + page.slice(1).replace("-", " ") + ` | ${pageTitle.textContent}`;
+
         //when all the parts are loaded, append the container to the loader and hide the loader
         loader.after(container);
         loader.classList.add("hidden");

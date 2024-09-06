@@ -49,7 +49,7 @@
 │   ├── home.css
 │   ├── joinus.css
 │   ├── news.css
-│   └── normalize.css
+│   ├── normalize.css
 │   ├── teams.css
 │   └── tournament.css
 │
@@ -62,3 +62,6 @@
 ## Bonuses delivered
 
 ## Browser compatibility
+
+## External resources
+
