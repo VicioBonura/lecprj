@@ -10,6 +10,7 @@
 
 ## Files and project structure
 
+```
 .
 ├── assets
 │   ├── imgs
@@ -56,6 +57,7 @@
 ├── favicon.png
 ├── index.html                  // main page
 └── readme.md
+```
 
 ## Features delivered
 
