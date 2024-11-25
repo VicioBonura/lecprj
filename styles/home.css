@@ -1,3 +1,7 @@
 h2 {
     color: red;
 }
+
+main {
+    min-height: 50vh;
+}
